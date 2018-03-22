@@ -25,9 +25,11 @@ gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 
+gem 'bootstrap', '~> 4.0.0'
+gem 'dotenv-rails', require: 'dotenv/rails-now'
+gem 'jquery-rails', '~> 4.3'
 gem 'rest-client'
 gem 'slim-rails'
-gem 'dotenv-rails', require: 'dotenv/rails-now'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -40,10 +42,10 @@ group :development, :test do
   gem 'pronto-rails_schema', require: false
   gem 'rubocop', require: false
 
-  gem 'simplecov'
-  gem 'rspec-json_expectations'
   gem 'better_errors'
+  gem 'rspec-json_expectations'
   gem 'rspec-rails', '~> 3.7', '>= 3.7.2'
+  gem 'simplecov'
 end
 
 group :development do

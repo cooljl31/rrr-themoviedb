@@ -5,7 +5,7 @@ class MovieService
     def fetch_movies(params = {})
       uri = "#{ENV.fetch('API_URL')}/search/movie"
       res = RestClient.get(uri, params: payload(params))
-      JSON.parse(res)
+      JSON.parse(res)['results']
     end
 
     protected
@@ -16,7 +16,7 @@ class MovieService
         query: params[:q] || 'superman',
         include_adult: params[:adult] || false,
         region: params[:region] || '',
-        year: params[:year] || '2016'
+        year: params[:year] || ''
       }.freeze
     end
   end
