@@ -27,6 +27,7 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'rest-client'
 gem 'slim-rails'
+gem 'dotenv-rails', require: 'dotenv/rails-now'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -39,6 +40,8 @@ group :development, :test do
   gem 'pronto-rails_schema', require: false
   gem 'rubocop', require: false
 
+  gem 'simplecov'
+  gem 'rspec-json_expectations'
   gem 'better_errors'
   gem 'rspec-rails', '~> 3.7', '>= 3.7.2'
 end
