@@ -15,8 +15,4 @@ class MoviesController < ApplicationController
   def movie_service
     @movie_service ||= MovieService.new
   end
-
-  def movie_params
-    params.require(:search).permit(:q, :year, :us)
-  end
 end
