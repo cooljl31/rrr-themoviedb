@@ -28,7 +28,7 @@ describe MovieService do
         expect(response.count).to eq 2
       end
 
-      it 'return the title of the year' do
+      it 'return the title' do
         expect(response[0]['title']).to eq 'Batman: Year One'
       end
     end
