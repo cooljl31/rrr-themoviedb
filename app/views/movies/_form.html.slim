@@ -1,0 +1,14 @@
+= form_tag search_movies_path, method: :get
+  .row.pb-3
+    .col-lg-offset-4.col-lg-8.offset-md-2
+      .input-group
+        span.input-group-prepend.search-panel
+          button.btn.btn-outline-secondary.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button"
+            span#search_concept
+              = t('.filter.button')
+          #fullyear.dropdown-menu.scrollable-menu
+            = hidden_field_tag :year, :year
+        = text_field_tag :q, params['q'], class: 'form-control rounded-0', placeholder: "#{ t('.placeholder') }"
+        span.input-group-append
+          = button_tag(type: "submit", id: 'sendButton', class: 'btn btn-outline-secondary form-control') do
+            = t('.search.button')

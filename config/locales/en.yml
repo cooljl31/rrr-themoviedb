@@ -30,4 +30,13 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  movies:
+    index:
+      keywords:
+        search_term: Sorry, no movies matched your search. Please try again.
+    form:
+      placeholder: Search movies
+      filter:
+        button: Filter by
+      search:
+        button: Search
