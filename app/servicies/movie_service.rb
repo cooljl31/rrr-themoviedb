@@ -5,7 +5,7 @@ class MovieService
     def fetch_movies(params = {})
       uri = "#{ENV.fetch('API_URL')}/search/movie"
       res = RestClient.get(uri, params: payload(params))
-      JSON.parse(res)['results']
+      JSON.parse(res)['results'].sort_by { |a| a['release_date'] }.reverse
     end
 
     protected
