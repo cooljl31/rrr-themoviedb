@@ -9,10 +9,4 @@ class MoviesController < ApplicationController
     @movies = MovieService.fetch_movies(q: params[:q], year: params[:year])
     render :index
   end
-
-  private
-
-  def movie_service
-    @movie_service ||= MovieService.new
-  end
 end
