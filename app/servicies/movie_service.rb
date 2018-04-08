@@ -8,7 +8,7 @@ class MovieService
       JSON.parse(res)['results'].sort_by { |a| a['release_date'] }.reverse
     end
 
-    protected
+    private
 
     def payload(params)
       {
