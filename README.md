@@ -1,4 +1,4 @@
-# This is another R&R  Application wich fetching data from the 
+# This is another R&R  Application wich fetching data from the
 *[https://www.themoviedb.org/](https://www.themoviedb.org/)*
 
 ![alt text](./app/assets/images/moviesdb.png)
@@ -24,7 +24,13 @@ Create a .env file in the project's root directory and specify your key as below
 
 ```ruby
   bundle install && gem install foreman
-  foreman start
+  foreman start -f Procfile.dev
+```
+
+### start forman with hot reload
+
+```ruby
+  foreman start -f Procfile.dev-server
 ```
 
 ### TODO
@@ -35,5 +41,5 @@ Create a .env file in the project's root directory and specify your key as below
 
 ### Next
 
-* [ ] ReactJS to render cards
+* [x] ReactJS to render cards
 * [ ] Comments
