@@ -14,8 +14,8 @@ describe MovieService do
 
       it 'has basic info about the movie' do
         expect(response[0]).to include_json(
-          id: 209_112,
-          title: 'Batman v Superman: Dawn of Justice'
+          id: 487_670,
+          title: 'The Death of Superman'
         )
       end
     end
